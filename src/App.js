@@ -4,16 +4,13 @@ import Home from "./Pages/Home";
 import Products from "./Pages/Products";
 import Partners from "./Pages/Partners";
 import ErrorPage from "./Pages/ErrorPage";
+import Navbar from "./Components/Navbar/Navbar";
 
 function App() {
   return (
     <Router>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/products">Produktai</Link>
-        <Link to="/partners">Partneriai</Link>
-      </nav>
-      <Routes>
+      <Navbar />
+            <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/products" element={<Products />} />
